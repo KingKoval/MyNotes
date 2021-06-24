@@ -1,4 +1,4 @@
-package com.example.mynotes.room
+package com.example.mynotes
 
 import android.content.Context
 import androidx.room.RoomDatabase
@@ -13,7 +13,7 @@ abstract class NotesDatabase : RoomDatabase() {
         var dbNotes: NotesDatabase? = null
 
         @Synchronized
-        fun getDb(context: Context): NotesDatabase{
+        fun getDb(context: Context): NotesDatabase {
             if(dbNotes != null){
                 dbNotes = Room.databaseBuilder(
                     context,
